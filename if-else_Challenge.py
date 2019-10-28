@@ -32,18 +32,18 @@ Print Weird if the number is weird; otherwise, print Not Weird.
 
 
 """
-n = 100
-
+# n = 100
 #
-# my solution
-if n % 2 == 1:
-    print("Weird")
-elif n % 2 == 0 and (n>=2 and n < 6):
-    print("Not Weird")
-elif n % 2 == 0 and (n>=6 and n < 21):
-    print("Weird")
-elif n % 2 == 0 and n > 20:
-    print("Not Weird")
+# #
+# # my solution
+# if n % 2 == 1:
+#     print("Weird")
+# elif n % 2 == 0 and (n>=2 and n < 6):
+#     print("Not Weird")
+# elif n % 2 == 0 and (n>=6 and n < 21):
+#     print("Weird")
+# elif n % 2 == 0 and n > 20:
+#     print("Not Weird")
 
 #
 # # another one #1
@@ -104,12 +104,32 @@ elif n % 2 == 0 and n > 20:
 #     print("Not Weird")
 #
 #
+# # solution 6
 #
+# n = int(input().strip())
+# check = {True: "Not Weird", False: "Weird"}
+#
+# print(check[
+#         n%2==0 and (
+#             n in range(2,6) or
+#             n > 20)
+#     ])
+
+#
+# def check(n):
+#     if n in range(6, 21) or n % 2 != 0:
+#         return "Weird"
+#     else:
+#         return "Not Weird"
+#
+# print(check(25))
 
 
+def checked(n):
+    check = {True: "Not Weird", False: "Weird"}
+    return check[n % 2 == 0 and n not in range(6, 21)]
 
-
-
+print(checked(6))
 
 
 
