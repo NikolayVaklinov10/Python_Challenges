@@ -42,7 +42,11 @@ print(solve("cris moore"))
 
 
 
-
+# solution 2
+s = input()
+for x in s[:].split():
+    s = s.replace(x, x.capitalize())
+print(s)
 
 
 
