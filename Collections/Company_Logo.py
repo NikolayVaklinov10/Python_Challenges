@@ -68,7 +68,18 @@ for each in Counter(sorted(input())).most_common(3):
 
 
 
+# solution 3
+if __name__ == '__main__':
+    s = input()
+    ans = []
 
+    for i in set(s):
+        ans.append((i, s.count(i)))
+
+    list.sort(ans, key=lambda x: (x[1], -ord(x[0])), reverse=True)
+
+    for x in range(3):
+        print(ans[x][0], ans[x][1])
 
 
 
