@@ -103,10 +103,9 @@ class OddStream(object):
         self.current += 2
         return to_return
 
-
+# the best solution
 def print_from_stream(n, stream=None):
-    if stream is None:
-        stream = EvenStream()
+    stream = stream or EvenStream()
     for _ in range(n):
         print(stream.get_next())
 
