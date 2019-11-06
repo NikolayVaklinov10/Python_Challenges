@@ -54,6 +54,7 @@ to . is excluded.
 # MY SOLUTION
 def count_substring(string, sub_string):
     count = string.count(sub_string)
+    count += 1
     return count
 
 
@@ -76,9 +77,10 @@ string, substring = (input().strip(), input().strip())
 print(sum([ 1 for i in range(len(string)-len(substring)+1) if string[i:i+len(substring)] == substring]))
 
 # solution 4 !!!
+
+
 def count_substring(string, sub_string):
     count=0
-    #print(len(string),len(sub_string))
     for i in range(0, len(string)-len(sub_string)+1):
         if string[i] == sub_string[0]:
             flag=1
