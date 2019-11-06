@@ -35,18 +35,13 @@ Chris Alan
 
 
 def solve(s):
-    return s.title()
+    for x in s[:].split():
+        s = s.replace(x, x.capitalize())
+    return s
 
 
 print(solve("cris moore"))
 
-
-
-# solution 2
-s = input()
-for x in s[:].split():
-    s = s.replace(x, x.capitalize())
-print(s)
 
 
 
