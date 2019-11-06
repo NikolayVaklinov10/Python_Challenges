@@ -86,11 +86,9 @@ Use // for division in Python 3.
 
 """
 
-import numpy as np
-n, m = map(int, input().split())
-a, b = (np.array([input().split() for _ in range(n)], dtype=int) for _ in range(2))
-print(a+b, a-b, a*b, a//b, a%b, a**b, sep='\n')
-
+import numpy
+print(str(numpy.eye(*map(int,input().split())))
+      .replace('1',' 1').replace('0',' 0'))
 
 
 
